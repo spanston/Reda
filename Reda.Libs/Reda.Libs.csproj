@@ -1,7 +1,16 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="awssdk.dynamodbv2" Version="3.3.101.64" />
+    <PackageReference Include="awssdk.extensions.netcore.setup" Version="3.3.100.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Reda.Contracts\Reda.Contracts.csproj" />
+  </ItemGroup>
 
 </Project>

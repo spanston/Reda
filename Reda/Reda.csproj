@@ -6,9 +6,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="awssdk.dynamodbv2" Version="3.3.101.64" />
+    <PackageReference Include="awssdk.extensions.netcore.setup" Version="3.3.100.1" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Reda.Contracts\Reda.Contracts.csproj" />
+    <ProjectReference Include="..\Reda.Libs\Reda.Libs.csproj" />
   </ItemGroup>
 
 </Project>

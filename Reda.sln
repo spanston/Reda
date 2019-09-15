@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reda", "Reda\Reda.csproj", "{99332FAE-90EC-40FF-AF9C-6F8F3C239B9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reda.Libs", "Reda.Libs\Reda.Libs.csproj", "{BE7C93FD-7F59-4D2D-BA46-F7402AE99000}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{99332FAE-90EC-40FF-AF9C-6F8F3C239B9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99332FAE-90EC-40FF-AF9C-6F8F3C239B9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99332FAE-90EC-40FF-AF9C-6F8F3C239B9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99332FAE-90EC-40FF-AF9C-6F8F3C239B9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE7C93FD-7F59-4D2D-BA46-F7402AE99000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE7C93FD-7F59-4D2D-BA46-F7402AE99000}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE7C93FD-7F59-4D2D-BA46-F7402AE99000}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE7C93FD-7F59-4D2D-BA46-F7402AE99000}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E076BDFC-2BA0-4707-8737-AD058688AC4F}
+	EndGlobalSection
+EndGlobal

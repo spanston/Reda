@@ -8,7 +8,7 @@ namespace Reda.Libs.Mappers
 {
     public interface IMapper
     {
-        IEnumerable<ListsResponse> ToItemListContract(IEnumerable<ListDb> lists);
-        ListsResponse ToItemListContract(ListDb lists);
+        IEnumerable<ListResponse> ToItemListContract(IEnumerable<ListDb> lists);
+        ListResponse ToItemListContract(ListDb lists);
     }
 }

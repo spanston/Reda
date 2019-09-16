@@ -8,15 +8,17 @@ namespace Reda.Libs.Mappers
 {
     public class Mapper : IMapper
     {
-        public IEnumerable<ListsResponse> ToItemListContract(IEnumerable<ListDb> lists)
+        public IEnumerable<ListResponse> ToItemListContract(IEnumerable<ListDb> lists)
         {
             return lists.Select(ToItemListContract);
         }
-        public ListsResponse ToItemListContract(ListDb list)
+        public ListResponse ToItemListContract(ListDb list)
         {
-            return new ListsResponse
+            return new ListResponse
             {
-                ListName = list.ItemListName
+                ItemListName = list.ItemListName,
+                ItemListId = list.ItemListId
+
             };
         }
     }

@@ -6,7 +6,8 @@ namespace Reda.Services
 {
     public interface IRedaService
     {
-        Task<IEnumerable<ListsResponse>> GetAllListsFromDatabase();
+        Task<IEnumerable<ListResponse>> GetAllListsFromDatabase();
+        Task<ListResponse> GetItemList(string userId, string itemListId);
     }
 }
  

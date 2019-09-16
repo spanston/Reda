@@ -4,8 +4,11 @@ using System.Text;
 
 namespace Reda.Contracts
 {
-   public class ListsResponse
+
+
+   public class ListResponse
     {
-        public string ListName { get; set; }       
+        public string ItemListName { get; set; }
+        public string ItemListId { get; set; }
     }
 }

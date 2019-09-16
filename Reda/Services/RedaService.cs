@@ -9,19 +9,26 @@ namespace Reda.Services
     public class RedaService : IRedaService
     {
         private readonly IItemListRepository _itemListRepository;
-        private readonly IMapper _mapper;
+        private readonly IMapper _map;
 
-        public RedaService(IItemListRepository itemListRepository, IMapper mapper)
+        public RedaService(IItemListRepository itemListRepository, IMapper map)
         {
             _itemListRepository = itemListRepository;
-            _mapper = mapper;
+            _map = map;
         }
 
-        public async Task<IEnumerable<ListsResponse>> GetAllListsFromDatabase()
+        public async Task<IEnumerable<ListResponse>> GetAllListsFromDatabase()
         {
             var response = await _itemListRepository.GetAllItemLists();
 
-            return _mapper.ToItemListContract(response);
+            return _map.ToItemListContract(response);
+        }
+
+        public async Task<ListResponse> GetItemList(string userId, string itemListId)
+        {
+            var response = await _itemListRepository.GetItemList(userId, itemListId);
+
+            return _map.ToItemListContract(response);
         }
 
     }

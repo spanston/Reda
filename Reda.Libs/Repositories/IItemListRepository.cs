@@ -9,5 +9,6 @@ namespace Reda.Libs.Repositories
     public interface IItemListRepository
     {
        Task<IEnumerable<ListDb>> GetAllItemLists();
+        Task<ListDb> GetItemList(string userId, string itemListId);
     }
 }

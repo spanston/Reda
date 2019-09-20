@@ -7,5 +7,6 @@ namespace Reda.Contracts
    public class ListsResponse
     {
         public string ListName { get; set; }       
+        public string TypeId { get; set; }
     }
 }

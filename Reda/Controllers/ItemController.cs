@@ -23,5 +23,14 @@ namespace Reda.Controllers
 
             return results;
         }
+
+        [HttpGet]
+        [Route("{userId}")]
+        public async Task<IEnumerable<ListsResponse>> GetUserItemLists(string userId)
+        {
+            var result = await _redaService.GetUserItemLists(userId);
+
+            return result;
+        }
     }
 }

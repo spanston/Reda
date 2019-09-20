@@ -16,7 +16,8 @@ namespace Reda.Libs.Mappers
         {
             return new ListsResponse
             {
-                ListName = list.ItemListName
+                ListName = list.ItemListName,                
+                TypeId = list.TypeId
             };
         }
     }

@@ -7,6 +7,7 @@ namespace Reda.Contracts
     public class AddingItemRequest
     {
         public string userId { get; set; }
+        public string ItemListId { get; set; }
         public string ItemListName { get; set; }
         public string TypeId { get; set; }
         public string ItemCategory { get; set; }

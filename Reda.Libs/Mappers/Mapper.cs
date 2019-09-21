@@ -44,6 +44,7 @@ namespace Reda.Libs.Mappers
             {
                 UserId = addingItemRequest.userId,
                 TypeId = addingItemRequest.TypeId,
+                ItemListId = addingItemRequest.ItemListId,
                 ItemName = addingItemRequest.ItemName,
                 ItemListName = addingItemRequest.ItemListName,
                 ItemCategory = addingItemRequest.ItemCategory,

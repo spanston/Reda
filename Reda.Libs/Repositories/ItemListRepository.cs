@@ -16,11 +16,12 @@ namespace Reda.Libs.Repositories
             _context = new DynamoDBContext(dynamoDBClient);
         }
 
-        public async Task<IEnumerable<ListDb>> GetAllItemLists()
+        public async Task<IEnumerable<ItemsDb>> GetAllItemLists()
         {
-            return await _context.ScanAsync<ListDb>(new List<ScanCondition>()).GetRemainingAsync();
+            return await _context.ScanAsync<ItemsDb>(new List<ScanCondition>()).GetRemainingAsync();
         }
-        public async Task<IEnumerable<ListDb>> GetUserItemLists(string userId)
+
+        public async Task<IEnumerable<ItemsDb>> GetUserItemLists(string userId)
         {
             var config = new DynamoDBOperationConfig
             {
@@ -30,8 +31,16 @@ namespace Reda.Libs.Repositories
                     new ScanCondition("TypeId", ScanOperator.BeginsWith, "List")
                 }
             };
-            return await _context.QueryAsync<ListDb>(userId, config).GetRemainingAsync();
+            return await _context.QueryAsync<ItemsDb>(userId, config).GetRemainingAsync();
         }
 
+        public async Task<IEnumerable<ItemsDb>> GetListContent(string listId)
+        {
+            var config = new DynamoDBOperationConfig
+            {
+                IndexName = "ItemListId-index"
+            };
+            return await _context.QueryAsync<ItemsDb>(listId, config).GetRemainingAsync();
+        }
     }
 }

@@ -2,6 +2,7 @@
 using Reda.Libs.Mappers;
 using Reda.Libs.Repositories;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Reda.Services
@@ -23,14 +24,19 @@ namespace Reda.Services
 
             return _map.ToItemListContract(response);
         }
+
         public async Task<IEnumerable<ListsResponse>> GetUserItemLists(string userId)
         {
-            
             var response = await _itemListRepository.GetUserItemLists(userId);
 
-            
-
             return _map.ToItemListContract(response);
+        }
+        
+        public async Task<IEnumerable<ItemsResponse>> GetListContent(string listId)
+        {
+            var response = await _itemListRepository.GetListContent(listId);
+
+            return _map.ToItemsContract(response);
         }
     }
 }

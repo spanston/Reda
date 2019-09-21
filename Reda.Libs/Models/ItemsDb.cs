@@ -6,7 +6,7 @@ using System.Text;
 namespace Reda.Libs.Models
 {
     [DynamoDBTable("Items")]
-    public class ListDb
+    public class ItemsDb
     {
         [DynamoDBHashKey]
         public string UserId { get; set; }

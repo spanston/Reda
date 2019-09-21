@@ -6,7 +6,7 @@ using Reda.Services;
 
 namespace Reda.Controllers
 {
-    [Route("itemlists")]
+    [Route("reda")]
     public class ItemController : Controller
     {
         private readonly IRedaService _redaService;
@@ -25,10 +25,19 @@ namespace Reda.Controllers
         }
 
         [HttpGet]
-        [Route("{userId}")]
+        [Route("lists/{userId}")]
         public async Task<IEnumerable<ListsResponse>> GetUserItemLists(string userId)
         {
             var result = await _redaService.GetUserItemLists(userId);
+
+            return result;
+        }
+
+        [HttpGet]
+        [Route("itemlist/{listId}")]
+        public async Task<IEnumerable<ItemsResponse>> GetListContent(string listId)
+        {
+            var result = await _redaService.GetListContent(listId);
 
             return result;
         }

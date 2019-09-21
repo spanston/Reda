@@ -38,5 +38,13 @@ namespace Reda.Services
 
             return _map.ToItemsContract(response);
         }
+
+        public async Task AddItem(string userId, AddingItemRequest addingItemRequest)
+        {
+            var item =  _map.ToItemDbModel(userId, addingItemRequest);
+            await _itemListRepository.AddItem(item);
+
+            
+        }
     }
 }

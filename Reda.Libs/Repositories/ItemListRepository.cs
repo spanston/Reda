@@ -42,5 +42,9 @@ namespace Reda.Libs.Repositories
             };
             return await _context.QueryAsync<ItemsDb>(listId, config).GetRemainingAsync();
         }
+        public async Task AddItem(ItemsDb item)
+        {
+            await _context.SaveAsync(item);
+        }
     }
 }

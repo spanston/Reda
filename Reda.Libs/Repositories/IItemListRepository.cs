@@ -11,5 +11,6 @@ namespace Reda.Libs.Repositories
        Task<IEnumerable<ItemsDb>> GetAllItemLists();
         Task<IEnumerable<ItemsDb>> GetUserItemLists(string userId);
         Task<IEnumerable<ItemsDb>> GetListContent(string listId);
+        Task AddItem(ItemsDb item);
     }
 }

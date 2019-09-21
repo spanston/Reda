@@ -1,6 +1,5 @@
 ﻿using Reda.Contracts;
 using Reda.Libs.Models;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -16,7 +15,7 @@ namespace Reda.Libs.Mappers
         {
             return new ListsResponse
             {
-                ListName = list.ItemListName,                
+                ListName = list.ItemListName,
                 TypeId = list.TypeId
             };
         }
@@ -36,6 +35,21 @@ namespace Reda.Libs.Mappers
                 DateRemoved = list.DateRemoved,
                 DueAt = list.DueAt,
                 IsDone = list.Isdone
+            };
+        }
+
+        public ItemsDb ToItemDbModel(string userId, AddingItemRequest addingItemRequest)
+        {
+            return new ItemsDb
+            {
+                UserId = addingItemRequest.userId,
+                TypeId = addingItemRequest.TypeId,
+                ItemName = addingItemRequest.ItemName,
+                ItemListName = addingItemRequest.ItemListName,
+                ItemCategory = addingItemRequest.ItemCategory,
+                Isdone = addingItemRequest.IsDone,
+                DateRemoved = addingItemRequest.DateRemoved,
+                DueAt = addingItemRequest.DueAt
             };
         }
     }

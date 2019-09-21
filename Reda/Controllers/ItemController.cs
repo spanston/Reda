@@ -41,5 +41,14 @@ namespace Reda.Controllers
 
             return result;
         }
+
+        [HttpPost]
+        [Route("itemlist/{userId}")]
+        public async Task<IActionResult> AddItem(string userId, [FromBody] AddingItemRequest addingItemRequest)
+        {
+            await _redaService.AddItem(userId, addingItemRequest);
+
+            return Ok();
+        }
     }
 }

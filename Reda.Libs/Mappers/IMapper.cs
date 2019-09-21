@@ -12,5 +12,6 @@ namespace Reda.Libs.Mappers
         ListsResponse ToItemListContract(ItemsDb lists);
         ItemsResponse ToItemsContract(ItemsDb list);
         IEnumerable<ItemsResponse> ToItemsContract(IEnumerable<ItemsDb> lists);
+        ItemsDb ToItemDbModel(string userId, AddingItemRequest addingItemRequest);
     }
 }

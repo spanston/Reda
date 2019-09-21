@@ -20,11 +20,6 @@ namespace Reda.Libs.Repositories
             return await _context.ScanAsync<ListDb>(new List<ScanCondition>()).GetRemainingAsync();
         }
 
-        public async Task<ListDb> GetItemList(string userId, string itemListId)
-        {
-            return await _context.LoadAsync<ListDb>(userId, itemListId);
-        }
-
 
     }
 }
